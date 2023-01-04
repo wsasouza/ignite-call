@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { Container, Hero, Preview } from './styles'
 
 import previewImage from '../../assets/app-preview.png'
-import { ClaimUserNameForm } from './components/ClaimUserNameForm'
+import ClaimUserNameForm from './components/ClaimUserNameForm'
 
-const Home = () => {
+export default function Home() {
   return (
     <Container>
       <Hero>
@@ -32,5 +32,3 @@ const Home = () => {
     </Container>
   )
 }
-
-export default Home
