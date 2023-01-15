@@ -1,5 +1,5 @@
 import { Button, Heading, MultiStep, Text } from '@ignite-ui/react'
-import { signIn, useSession } from 'next-auth/react'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 import { ArrowRight } from 'phosphor-react'
 
@@ -35,7 +35,7 @@ export default function Register() {
           </Button>
         </ConnectItem>
 
-        <Button type="submit">
+        <Button type="submit" onClick={() => signOut()}>
           Próximo passo <ArrowRight />
         </Button>
       </ConnectBox>
