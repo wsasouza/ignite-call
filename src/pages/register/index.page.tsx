@@ -52,7 +52,7 @@ export default function Register() {
 
       await router.push('/register/connect-calendar')
     } catch (err) {
-      if (err instanceof AxiosError && err.response.data?.message) {
+      if (err instanceof AxiosError && err.response?.data?.message) {
         alert(err.response.data.message)
         return
       }
